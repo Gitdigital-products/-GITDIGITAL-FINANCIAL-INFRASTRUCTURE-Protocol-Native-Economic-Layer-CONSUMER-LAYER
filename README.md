@@ -105,5 +105,16 @@ STEP 3: CREDIT EVOLUTION
 │  │  • Smart contract programmability                                │    │
 │  └─────────────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────┘
+Repository	Founder Loan Function	Integration	
+Checkout-core	Revenue intake, fiat→crypto	Auto-triggers loan repayment split	
+Ledger	Double-entry accounting	Tracks loan payable, repayments, tax	
+Wallet-repo	Self-custody company treasury	Multi-sig, payment authorization	
+Dynamic-NFT-dNFT-Framework	Loan instrument itself	Evolving credit NFT for Founder	
+Token-Standards	USDC, governance tokens	Repayment currency, voting rights	
+NFT-Marketplace	Secondary loan market	Sell/trade loan cash flows	
+Reputation-Network	Credit scoring algorithm	Aggregates payment history	
+
+
+
 
       GITDIGITAL FINANCIAL INFRASTRUCTURE       (Protocol-Native Economic Layer)   │ │  CONSUMER LAYER │  │  Checkout-  │ │  Wallet-    │ │  NFT        │ │  Dynamic    │       │ │  │  core       │ │  repo       │ │  Marketplace│ │  NFT (dNFT) ││  Framework  │       │ │  │ • Payment   │ │ • Self-     │ │ • Primary/  │ │ • Credit    │ 
