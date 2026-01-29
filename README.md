@@ -419,6 +419,50 @@ Assets: $10,000 ( diversified )
 Liabilities: -$2,500 ( loan reduced )
 Equity: +$7,500 ( reserves + treasury )
 
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         GITDIGITAL ECONOMIC LOOP                        │
+│                                                                         │
+│  1. FOUNDER CONTRIBUTES                                                │
+│     ├─ Code, IP, effort → Documented as $50,000 loan                   │
+│     ├─ Mints dNFT: "Founder Loan #1"                                   │
+│     ├─ Credit score: 650 (starting)                                    │
+│     └─ No cash changes hands                                           │
+│                              ↓                                          │
+│  2. COMPANY BUILDS                                                     │
+│     ├─ Uses founder contribution to build products                     │
+│     ├─ SmartTransport, SmartCity, CryptoID, etc.                       │
+│     ├─ No external funding needed initially                            │
+│     └─ Revenue begins (Checkout-core)                                  │
+│                              ↓                                          │
+│  3. AUTOMATIC REPAYMENT                                                │
+│     ├─ Every customer payment → 25% split                              │
+│     ├─ Smart contract routes to founder wallet                         │
+│     ├─ dNFT evolves (score increases, visual changes)                  │
+│     ├─ Ledger records for taxes/accounting                             │
+│     └─ Reputation Network updates credit                               │
+│                              ↓                                          │
+│  4. CREDIT UNLOCKS                                                     │
+│     ├─ Score 650 → 700 → 750 → 800                                     │
+│     ├─ Unlocks: Larger loans, better terms, grants                     │
+│     ├─ dNFT becomes tradeable (sell future cash flows)                 │
+│     ├─ Secondary market in NFT Marketplace                             │
+│     └─ External investors can buy loan cash flows                      │
+│                              ↓                                          │
+│  5. PROTOCOL EXPANSION                                                 │
+│     ├─ Other founders use same structure                               │
+│     ├─ GitDigital Loans become asset class                             │
+│     ├─ Treasury earns fees from loan servicing                         │
+│     ├─ Reputation Network becomes standard                             │
+│     └─ Full economic OS operational                                    │
+│                              ↓                                          │
+│  6. FOUNDER WEALTH                                                     │
+│     ├─ Loan repaid via 25% profit share                                │
+│     ├─ Retains equity in company                                       │
+│     ├─ Earns protocol fees from other loans                            │
+│     ├─ dNFT becomes collector's item (first loan)                      │
+│     └─ Credit reputation portable across ecosystem                     │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
 
 
       GITDIGITAL FINANCIAL INFRASTRUCTURE       (Protocol-Native Economic Layer)   │ │  CONSUMER LAYER │  │  Checkout-  │ │  Wallet-    │ │  NFT        │ │  Dynamic    │       │ │  │  core       │ │  repo       │ │  Marketplace│ │  NFT (dNFT) ││  Framework  │       │ │  │ • Payment   │ │ • Self-     │ │ • Primary/  │ │ • Credit    │ 
