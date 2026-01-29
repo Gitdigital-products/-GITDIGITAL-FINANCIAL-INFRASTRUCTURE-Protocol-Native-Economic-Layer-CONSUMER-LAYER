@@ -1,0 +1,2 @@
+# -GITDIGITAL-FINANCIAL-INFRASTRUCTURE-Protocol-Native-Economic-Layer-CONSUMER-LAYER
+      GITDIGITAL FINANCIAL INFRASTRUCTURE       (Protocol-Native Economic Layer)   │ │  CONSUMER LAYER │  │  Checkout-  │ │  Wallet-    │ │  NFT        │ │  Dynamic    │       │ │  │  core       │ │  repo       │ │  Marketplace│ │  NFT (dNFT) ││  Framework  │       │ │  │ • Payment   │ │ • Self-     │ │ • Primary/  │ │ • Credit    │ 
