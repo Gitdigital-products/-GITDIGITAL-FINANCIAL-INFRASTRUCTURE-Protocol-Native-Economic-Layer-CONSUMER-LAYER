@@ -113,6 +113,87 @@ Dynamic-NFT-dNFT-Framework	Loan instrument itself	Evolving credit NFT for Founde
 Token-Standards	USDC, governance tokens	Repayment currency, voting rights	
 NFT-Marketplace	Secondary loan market	Sell/trade loan cash flows	
 Reputation-Network	Credit scoring algorithm	Aggregates payment history	
+// Checkout-core automatic loan repayment
+
+interface PaymentSplit {
+  founderLoan: number;    // 25%
+  taxReserve: number;     // 30%
+  operatingReserve: number; // 20%
+  treasury: number;       // 25%
+}
+
+export async function processPayment(
+  amount: number,           // USDC amount
+  customer: string,
+  metadata: PaymentMetadata
+): Promise<TransactionResult> {
+  
+  // Calculate splits
+  const split: PaymentSplit = {
+    founderLoan: amount * 0.25,
+    taxReserve: amount * 0.30,
+    operatingReserve: amount * 0.20,
+    treasury: amount * 0.25
+  };
+  
+  // Execute parallel transfers
+  const [loanResult, taxResult, opsResult, treasuryResult] = await Promise.all([
+    // 25% to Founder Loan Protocol
+    transferUSDC({
+      to: FOUNDER_LOAN_PROGRAM_ADDRESS,
+      amount: split.founderLoan,
+      memo: `Loan payment ${metadata.orderId}`
+    }),
+    
+    // 30% to Tax Reserve (Ledger tracked)
+    transferUSDC({
+      to: TAX_RESERVE_WALLET,
+      amount: split.taxReserve,
+      memo: `Tax reserve ${metadata.orderId}`
+    }),
+    
+    // 20% to Operating Reserve
+    transferUSDC({
+      to: OPERATING_RESERVE_WALLET,
+      amount: split.operatingReserve,
+      memo: `Operations ${metadata.orderId}`
+    }),
+    
+    // 25% to Growth Treasury
+    transferUSDC({
+      to: TREASURY_WALLET,
+      amount: split.treasury,
+      memo: `Treasury ${metadata.orderId}`
+    })
+  ]);
+  
+  // Record in Ledger
+  await Ledger.record({
+    type: 'REVENUE',
+    amount,
+    splits: split,
+    metadata
+  });
+  
+  // Update Founder Loan dNFT
+  await FounderLoanProgram.recordPayment({
+    amount: split.founderLoan,
+    tokenId: FOUNDER_LOAN_NFT_ID
+  });
+  
+  // Update Reputation Network
+  await ReputationNetwork.recordPayment({
+    entity: COMPANY_ADDRESS,
+    amount: split.founderLoan,
+    type: 'LOAN_REPAYMENT'
+  });
+  
+  return {
+    success: true,
+    splits: split,
+    loanCreditImpact: calculateCreditImpact(split.founderLoan)
+  };
+}
 
 
 
